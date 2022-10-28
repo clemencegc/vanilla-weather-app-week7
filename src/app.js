@@ -1,6 +1,6 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let hours = timestamp.getHours();
+  let hours = date.getHours();
   if (hours < 10) {
     hours = "0${hours}";
   }
@@ -32,13 +32,11 @@ function displayTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
-  temperatureElement.innerHTML = math.round(response.data.main.temp);
-  cityElement.innerHTML = Math.round(response.data.name);
-  descriptionElement.innerHTML = Math.round(
-    response.data.weather[0].description
-  );
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.main.wind);
+  windElement.innerHTML = Math.round(response.data.main.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
