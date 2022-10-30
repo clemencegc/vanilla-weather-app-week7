@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #878787;
+  color: rgba(59, 70, 65, 0.467);
   font-size: 24px;
   font-weight: 100;
   line-height: 28px;
@@ -16,7 +16,7 @@ ul {
 }
 li {
   list-style: none;
-  color: #878787;
+  color: rgba(59, 70, 65, 0.467);
   font-size: 16px;
   text-transform: capitalize;
   font-weight: 100;
@@ -24,8 +24,9 @@ li {
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid;
+  border: 1px solid #488b8f;
   border-radius: 5px;
+  background-color: #add2c9;
 }
 
 .weather-app-wrapper {
@@ -36,21 +37,21 @@ li {
   margin-bottom: 10px;
 }
 .icon {
-  margin-right: 10px;
-  height: 64px;
-  width: 64px;
+  margin-right: 8px;
+  height: 85px;
+  width: 85px;
 }
 .temperature {
-  color: burlywood;
+  color: #488b8f;
   font: weight 400px;
   line-height: 1;
 }
 
 .units {
-  color: #878787;
+  color: #488b8f;
   position: relative;
   font-size: 16px;
-  top: -34px;
+  font-weight: 600;
 }
 
 .weather-temperature.active {
@@ -59,4 +60,8 @@ li {
 }
 .weather-temperature.active:hover {
   text-decoration: none;
+}
+.btn {
+  background-color: cadetblue;
+  border: cadetblue;
 }
